@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Search Results</title>
+    <style>
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .video {
+        width: 30%;
+        margin-bottom: 20px;
+      }
+      img {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Search Results</h1>
+    <div class="row">
+      {% for video_id, thumbnail, title in video_ids %}
+      <div class="video">
+        <a href="{{ url_for('watch', video_id=video_id) }}">
+          <img src="{{ thumbnail }}" alt="{{ title }}">
+          <p>{{ title }}</p>
+        </a>
+      </div>
+      {% if loop.index % 3 == 0 %}
+    </div>
+    <div class="row">{% endif %} {% endfor %}</div>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Search</title>
+</head>
+<body>
+    <h1>Search for YouTube Videos</h1>
+    <form action="/search" method="post">
+        <input type="text" name="query">
+        <input type="submit" value="Search">
+    </form>
+
+    <div class="row">
+        {% for video_id, thumbnail, title in new_video_ids %}
+        <div class="video">
+          <a href="{{ url_for('watch', video_id=video_id) }}">
+            <img src="{{ thumbnail }}" alt="{{ title }}">
+            <p>{{ title }}</p>
+          </a>
+        </div>
+        {% if loop.index % 3 == 0 %}
+      </div>
+      <div class="row">{% endif %} {% endfor %}</div>
+</body>
+</html>
