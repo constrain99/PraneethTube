@@ -8,7 +8,7 @@ import time
 app = Flask(__name__)
 
 # Your YouTube API key
-api_key = 'AIzaSyBjitT48BKFtUm-Lit4e4SnWJ9gh8vSLas'
+api_key = 'AIzaSyDwqdLReFcAWNMvJKu5GlMaSvJEZGyHo40'
 
 # Define the YouTube search function
 def youtube_search(query):
