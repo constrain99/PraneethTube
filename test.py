@@ -5,6 +5,7 @@ import random
 import numpy as np
 import time
 api_key='AIzaSyDwqdLReFcAWNMvJKu5GlMaSvJEZGyHo40'
+api_key='AIzaSyBjitT48BKFtUm-Lit4e4SnWJ9gh8vSLas'
 with open('watched_videos.csv', 'r') as f:
         reader = csv.reader(f)
         a=[]
